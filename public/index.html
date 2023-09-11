@@ -1,0 +1,2260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <!-- font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--css file link-->
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    <header class="header">
+       <div class="header-1">
+            <a href="#" class="logo"><i class="fas fa-book"></i>Bibilophile</a>
+
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="search here..."id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+            <div class="icons">
+                <div id="search-btn"  class="fas fa-search"></div>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="/api/add-to-cart"  class="fas fa-shopping-cart" id="cart-icon" data-cart-count="0" >
+                    <span id="cart-count">0</span>
+                </a>
+                <div id="login-btn"  class="fas fa-user"></div>
+            </div>
+            
+              
+              
+       </div>
+       <div class="header-2">
+        <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <!--a href="#featured">Features</a-->
+            <li class="dropdown">
+                <a href="#categories">Categories</a>
+                <ul class="dropdown-menu">
+                  <!--li><a href="#">Comic</a></li-->
+                  <li><a href="#crime">Crime</a></li>
+                  <li><a href="#horror">Horror</a></li>
+                  <li><a href="#Mythological">Mythology</a></li>
+                  <li><a href="#romantic">Romantic</a></li>
+                  <li><a href="#tragedy">Tragedy</a></li>
+                </ul>
+            </li>
+            <li><a href="#arrivals">Arrivals</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#blogs">blogs</a></li>>
+        </ul>  
+        </nav>
+       </div>
+    </header>
+
+    <!--login info-->
+    <div class="login-form-container">
+        <div id="close-login-btn" class="fas fa-times"></div>
+        <form id="loginForm" action="/api/login" method="post" >
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" name="email" class="box" placeholder="enter your name" id="loginMail">
+            <span>password</span>
+            <input type="password" name="password" class="box" placeholder="enter your password" id="loginPassword">
+            <div class="checkbox">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <button type="submit">SignIn</button>
+            <p>forget password ? <a href="/forget-password">click here</a></p>
+            <p>don't have an account ? <a href="#" id="create-account-link">create one</a></div></p>
+        </form>
+    </div>
+
+    <!--login end-->
+    <!--create user-->
+    <div class="container" id="signup-container" style="display: none;">
+        <h3>Create Account</h3>
+        <form class="signin" action="/api/register" method="post">
+
+        
+            <label for="name"><b>Name</b></label>
+            <input type="text" id="signname" name="name" placeholder="Enter your name" required>
+            
+            <label for="email"><b>Email</b></label>
+            <input type="email" id="signemail" name="email" placeholder="Enter your email" required>
+            
+            <label for="password"><b>Password</b></label>
+            <input type="password" id="signpassword" name="password" placeholder="Enter your password" required>
+            
+            <button type="submit">SignUp</button>
+        </form>
+    </div>
+    <!--create user end-->
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content">
+                <h3>upto 25% off</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus blanditiis nesciunt, nobis amet inventore magni itaque illum iusto id aut!</p>
+                <a href="#" class="btn1">shop now</a>
+            </div>
+            <div class="books-slider swiper-container">    
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swiper-slide"><img src="image/book-1.jpg" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="image/book-2.jpg" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="image/book-3.jpg" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="image/book-4.jpg" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="image/book-5.jpg" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="image/book-6.jpg" alt=""></a>
+                    </div>
+                    <!--img src="ïmage/stand.jpg" class="stand" alt=""-->
+                    <!--div class="swiper-pagination"></div-->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> 
+            </div>  
+        </div>
+    </section>
+    
+<section class ="icons-container">
+        <div class="icons">
+            <i class="fas fa-plane"></i>
+            <div class="content">
+                <h3>free shipping</h3>
+                <p>order over $100</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-lock"></i>
+            <div class="content">
+                <h3>secure payment</h3>
+                <p>100 secure payment</p>
+            </div>
+        </div>  
+        
+        <div class="icons">
+            <i class="fas fa-redo-alt"></i>
+            <div class="content">
+                <h3>easy returns</h3>
+                <p>10 days returns</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-headset"></i>
+            <div class="content">
+                <h3>24/7 support</h3>
+                <p>call us anytime</p>
+            </div>
+        </div>
+</section>
+<!-- Crime section -->
+<section class="crime" id="crime">
+    <h1 class="heading"> <span id="mySpan">crime books</span></h1>
+    <div class="crime-slider swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="crime/Bluebird,bluebird(c).jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="price">$15.99<span>$20.99</span></div>
+                           
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+
+                    <a href="/api/add-to-cart"  method="post" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="crime/In Cold blood(c).jpg" alt="">
+                </div>
+                <form action="/api/add-to-cart" method="POST">
+                    <div class="content">
+                        <!-- Other content -->
+                        <!-- <label for="quantity">Quantity:</label>
+                        <select name="quantity" id="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select> -->
+                        <br>
+                        <button type="submit" class="btn" name="product_id" value="crime/In Cold blood(c).jpg">add to cart</button>
+                        <button type="submit" class="btn" name="product_id" value="product_id_here">Buy Now</button>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="crime/muder on the orient express(c).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="crime/The daughter of time(c).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="crime/the girl with the dragon tattoo(c).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="crime/The silent patient(c).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="crime/Bluebird,bluebird(c).jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="crime/In Cold blood(c).jpg" alt="">
+                </div>
+                <div class="content">
+    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="crime/muder on the orient express(c).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="crime/The daughter of time(c).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="crime/the girl with the dragon tattoo(c).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="crime/The silent patient(c).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+<!--crime ends-->
+
+<!-- horror section -->
+<section class="horror" id="horror">
+    <h1 class="heading"> <span id="mySpan">horror books</span></h1>
+    <div class="horror-slider swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="horror/Ghost Story(h).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="horror/House of leaves (h).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="horror/IT.jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="horror/the haunting of hill house(h).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="horror/the mexican gothic(h).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="horror/the only good  indians(h).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="horror/Ghost Story(h).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="horror/House of leaves (h).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="horror/IT.jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="horror/the haunting of hill house(h).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="horror/the mexican gothic(h).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="horror/the only good  indians(h).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <label for="quantity">Quantity:</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+<!-- Comic section -->
+<section class="Mythological" id="Mythological">
+    <h1 class="heading"> <span id="mySpan">mythological books</span></h1>
+    <div class="Mythological-slider swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="mythological/Beneath the moon(m).jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="mythological/circe (m).jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="mythological/Indian Mythology(m).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="mythological/odyssey(m).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="mythological/ramayan(m).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="mythological/The penelopiad(m).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="mythological/Beneath the moon(m).jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="mythological/circe (m).jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="mythological/Indian Mythology(m).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="mythological/odyssey(m).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="mythological/ramayan(m).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="mythological/The penelopiad(m).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+<!-- Comic section -->
+<section class="romantic" id="romantic">
+    <h1 class="heading"> <span id="mySpan">romantic books</span></h1>
+    <div class="romantic-slider swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="romantic/A walk to remember(r).webp" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="romantic/Call me by your name(r).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="romantic/if i never met you(r).jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="romantic/It ends with us(r).jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="romantic/red white and royal blue(r).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="romantic/the american roommate experiment(r).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="romantic/A walk to remember(r).webp" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="romantic/Call me by your name(r).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="romantic/if i never met you(r).jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="romantic/It ends with us(r).jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="romantic/red white and royal blue(r).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="romantic/the american roommate experiment(r).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+<!-- tragedy section -->
+<section class="tragedy" id="tragedy">
+    <h1 class="heading"> <span id="mySpan">tragedy books</span></h1>
+    <div class="tragedy-slider swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Tragedy/book thief(t).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Tragedy/Hamlet (t).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Tragedy/macbeth(t).jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Tragedy/romeo and juliet(t).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Tragedy/wuthering heights(t).jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Tragedy/book thief(t).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Tragedy/book thief(t).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Tragedy/Hamlet (t).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Tragedy/macbeth(t).jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Tragedy/romeo and juliet(t).jpg" alt="">
+                </div>
+                <div class="content">
+                
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Tragedy/wuthering heights(t).jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Tragedy/book thief(t).jpg" alt="">
+                </div>
+                <div class="content">
+            
+                    <div class="price">$15.99<span>$20.99</span></div>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <br>
+                    <a href="#" class="btn">add to cart</a>
+                    <a href="#" class="btn">buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+                
+         
+<!--newspaper section starts-->
+<section class="newsletter">
+    <form action="">
+        <h3>subscribe for latest updates</h3>
+        <input type="email" name="" placeholder="enter your email" id="" class="box">
+        <input type="submit" value="subscribe" class="btn">
+    </form>
+</section>
+<!--newspaper section ends-->
+
+<!--arrival section starts-->
+
+<section class="arrivals" id="arrivals">
+    <h1 class="heading"> <span id="mySpan">new arrivals</span></h1>
+
+    <div class="arrivals-slider swiper-container">
+        <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-3.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+ 
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-4.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-5.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-3.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+ 
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-4.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="arrivals-slider swiper-container">
+            <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-6.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-7.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-8.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-9.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-10.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-3.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+ 
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-4.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.90<span>$20</span></div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+</section>  
+     
+<!--arrival section  ends-->
+
+<!--deals section starts-->
+<section class="deal">
+    <div class="content">
+        <h3>deal of the day</h3>
+        <h1>upto 50% off</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, repellendus velit? Explicabo animi aspernatur consectetur accusamus eius obcaecati aliquam laudantium?</p>
+        <a href="#" class="btn1">shop now</a>
+    </div>
+    
+    <div class="image">
+        <img src="image/deal-img.jpg" alt="">
+    </div>
+</section>
+<!--deals section ends-->
+<!--reviews section starts-->
+
+<section class="reviews" id="reviews">
+    <h1 class="heading"><span id="mySpan">client's review</span></h1>
+    <div class="reviews-slider swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="image/c1.jpg" alt="">
+                <h3>James</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae modi iusto illo adipisci earum molestias? Vel odio provident aliquid quibusdam.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/c2.jpg" alt="">
+                <h3>jessy</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae modi iusto illo adipisci earum molestias? Vel odio provident aliquid quibusdam.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/c3.jpg" alt="">
+                <h3>Mary</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae modi iusto illo adipisci earum molestias? Vel odio provident aliquid quibusdam.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/c4.jpg" alt="">
+                <h3>Joseph</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae modi iusto illo adipisci earum molestias? Vel odio provident aliquid quibusdam.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/c5.jpg" alt="">
+                <h3>emily</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae modi iusto illo adipisci earum molestias? Vel odio provident aliquid quibusdam.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/c1.jpg" alt="">
+                <h3>john</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae modi iusto illo adipisci earum molestias? Vel odio provident aliquid quibusdam.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/c2.jpg" alt="">
+                <h3>sophie</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae modi iusto illo adipisci earum molestias? Vel odio provident aliquid quibusdam.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/c3.jpg" alt="">
+                <h3>pooji</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae modi iusto illo adipisci earum molestias? Vel odio provident aliquid quibusdam.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/c4.jpg" alt="">
+                <h3>sacks</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae modi iusto illo adipisci earum molestias? Vel odio provident aliquid quibusdam.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/c5.jpg" alt="">
+                <h3>Likks</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae modi iusto illo adipisci earum molestias? Vel odio provident aliquid quibusdam.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--reviews section ends-->
+
+<!--blogs section starts-->
+
+<section class="blogs" id="blogs">
+    <h1 class="heading"> <span id="mySpan">our blogs</span></h1>
+    <div class="blogs-slider swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="image/book-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="image/book-2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="image/book-3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="image/book-6.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="image/book-7.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="image/book-3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="image/book-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="image/book-2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="image/book-6.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--blogs section ends-->
+<!--footer section starts-->
+
+
+<section class="footer">
+    <div class="box-container">
+
+        <div class="box">
+            <h3>our locations</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> india </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> russia </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> france </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> japan </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> africa </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> arrivals </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> blogs </a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> account info </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> ordered items </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> privacy policy </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> payment method </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> our services </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> bookstore@gmail.com </a>
+            <img src="image/world.jpg" class="map" alt="">
+        </div>
+
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+
+    </div>
+
+    <div class="credit"> created by <span>LPS</span> | all rights reserved! </div>
+</section>
+<!--footer section ends-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Check if the token is present in the response headers
+        const authToken = localStorage.getItem('x-auth-token');
+        if (authToken) {
+          alert('You are logged in!');
+          // Optionally, you can do other things here, like redirecting the user to a dashboard page.
+        }
+      </script>
+</body>
+</html>
